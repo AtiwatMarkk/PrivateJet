@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Special Valentine 💖</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="app" class="fade-in">
+        <!-- Floating Hearts Background -->
+        <div class="hearts-container"></div>
+
+        <!-- SCREEN 1: Welcome -->
+        <section id="screen-welcome" class="screen active">
+            <div class="content">
+                <h1>สวัสดีวันวาเลนไทน์</h1>
+                <p>เรามาทดสอบกันหน่อยดีกว่า ออฟเลนตัวจ้อยย 💖</p>
+                <button class="btn-primary" onclick="nextScreen(1)">เริ่มภารกิจ</button>
+            </div>
+        </section>
+
+        <!-- SCREEN 2: Quiz -->
+        <section id="screen-quiz" class="screen hidden">
+            <div class="content">
+                <h2 id="quiz-question">คำถาม...</h2>
+                <div id="quiz-options" class="options-container">
+                    <!-- Options injected by JS -->
+                </div>
+                <div id="quiz-feedback" class="feedback"></div>
+            </div>
+        </section>
+
+        <!-- SCREEN 3: Memory Gallery -->
+        <section id="screen-gallery" class="screen hidden">
+            <h2>My Family 💕</h2>
+            <div class="gallery-grid">
+                <!-- Real Images -->
+                <div class="gallery-item">
+                    <img src="assets/S__65060867_0.jpg" alt="Memory 1" class="gallery-img">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/S__65060875.jpg" alt="Memory 2" class="gallery-img">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/S__65060873_0.jpg" alt="Memory 3" class="gallery-img">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/S__65060874_0.jpg" alt="Memory 4" class="gallery-img">
+                </div>
+            </div>
+            <button class="btn-primary" onclick="nextScreen(3)">ไปต่อ ❤️</button>
+        </section>
+
+        <!-- SCREEN 4: Love Button -->
+        <section id="screen-love-button" class="screen hidden">
+            <div class="content">
+                <h2>คำถามสุดท้ายแล้วนะ…</h2>
+                <p>รักเรามั้ยยยยย?</p>
+                <div class="buttons-container">
+                    <button id="btn-love" class="btn-love" onclick="handleLoveClick()">รัก 💖</button>
+                    <button id="btn-no-love" class="btn-no-love">ไม่รัก 😏</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCREEN 5: Final Message -->
+        <section id="screen-final" class="screen hidden">
+            <div class="content">
+                <img src="assets/S__65060871.jpg" alt="Us" class="final-img">
+                <div id="final-message" class="typewriter-text"></div>
+                <button id="btn-hug" class="btn-primary hidden" onclick="showFinalHeart()">ขอเงินหน่อยย 55555
+                    🤗</button>
+                <div id="big-heart" class="hidden">💖</div>
+            </div>
+        </section>
+    </div>
+
+    <audio id="bg-music" loop>
+        <source src="assets/music.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
